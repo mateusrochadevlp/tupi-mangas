@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:17
+    container_name: tupi-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: tupi
+      POSTGRES_PASSWORD: tupi123
+      POSTGRES_DB: tupimangasdb
+    ports:
+      - "5434:5432"
+    volumes:
+      - tupi-pgdata:/var/lib/postgresql/data
+
+volumes:
+  tupi-pgdata:

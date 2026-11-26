@@ -1,0 +1,16 @@
+# dependências e build
+node_modules
+dist
+
+# variáveis de ambiente (nunca subir senhas)
+.env
+.env.*
+!.env.example
+
+# gerado pelo Prisma (recrie com `npx prisma generate`)
+src/generated
+
+# sistema e editor
+.DS_Store
+Thumbs.db
+*.log
